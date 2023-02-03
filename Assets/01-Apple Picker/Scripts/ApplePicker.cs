@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class ApplePicker : MonoBehaviour
 {
@@ -22,17 +23,23 @@ public class ApplePicker : MonoBehaviour
             basketList.Add(tBasketGO);
         }
     }
+public void AppleDestroyed() {
+// a
+// Destroy all of the falling Apples
+GameObject[] appleArray=GameObject.FindGameObjectsWithTag("Apple");
 
-    //public void AppleDestroyed()
-    //{
-    //  Destroy(apple.gameObject);
-    // int basketIndex = basketList.Count - 1;
-    // GameObject tBasketGO = basketList[basketIndex];
-    //basketList.RemoveAt(basketIndex);
-    //Destroy(tBasketGO);
-    //}
-    //if (basketList.Count == 0)
-    // {
-    //SceneManager.loadScene("_Scene_0");
-    //}
+ foreach ( GameObject tGO in appleArray ) {
+ Destroy( tGO );
+ }
+ int basketIndex = basketList.Count - 1;
+    GameObject tBasketGO = basketList[basketIndex];
+    basketList.RemoveAt(basketIndex);
+    Destroy(tBasketGO);
+    
+    if (basketList.Count == 0)
+    {
+    SceneManager.LoadScene("Main-ApplePicker");
+    }
+ 
+}
 }
