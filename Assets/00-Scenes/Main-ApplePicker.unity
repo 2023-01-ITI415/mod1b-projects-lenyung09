@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
+  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792234109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcede2aaffcdc458a59871ee6198c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 6988429403452823584, guid: 6b4fae4af05e26c4c86f5348c09f0731, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
+  basketList: []
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,11 +336,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3314f1f550fb8b54ba7f0a625decce18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  applePrefab: {fileID: 0}
-  speed: 1
+  applePrefab: {fileID: 4118721221236485938, guid: b56ba5199cfe4aa4dbfe70d0382996bf, type: 3}
+  speed: 10
   leftAndRightEdge: 20
-  chanceToChangeDirection: 0
-  secondsBetweenAppleDrop: 0
+  chanceToChangeDirections: 0.02
+  secondsBetweenAppleDrop: 1
 --- !u!1001 &1340076704689256233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,6 +348,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1340076704900822372, guid: d7be552e826b7104fb9099a05957e103, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1340076705281624220, guid: d7be552e826b7104fb9099a05957e103, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -377,6 +399,22 @@ PrefabInstance:
     - target: {fileID: 1340076705281624221, guid: d7be552e826b7104fb9099a05957e103, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340076705281624221, guid: d7be552e826b7104fb9099a05957e103, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340076705281624221, guid: d7be552e826b7104fb9099a05957e103, type: 3}
+      propertyPath: m_TagString
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340076705882647212, guid: d7be552e826b7104fb9099a05957e103, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2699024237688072798, guid: d7be552e826b7104fb9099a05957e103, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7be552e826b7104fb9099a05957e103, type: 3}
