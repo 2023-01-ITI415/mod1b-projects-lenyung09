@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +12,13 @@ public class PlayerController : MonoBehaviour
 
     private int count;
 
+    private int livesCount = 3;
+
     public Text countText;
+
+    public Text livesText;
+
+    public Text winText;
 
     public Collider goal;
     
@@ -22,7 +29,10 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         goal.gameObject.SetActive(false);
+        winText.gameObject.SetActive(false);
     }
+
+    
     
     void FixedUpdate()
     {
@@ -31,7 +41,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         rb.AddForce(movement * speed);
-    }
+        }
+   
 
     void OnTriggerEnter(Collider other)
     {
@@ -40,11 +51,12 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-            if (count >= 15) 
+            if (count >= 16) 
             {
                 goal.gameObject.SetActive(true);
             }
         }
+    
     }
     
     void SetCountText()
