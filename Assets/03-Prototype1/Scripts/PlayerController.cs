@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     private int count;
 
     public Text countText;
-    public Text winText;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
-        winText.text = "";
     }
     
     void FixedUpdate()
@@ -39,9 +37,9 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count = count + 1;
             SetCountText();
-            if (count >= 12) 
+            if (count >= 15) 
             {
-                winText.text = "You Win!";
+                //.gameObject.SetActive(true);
             }
         }
     }
