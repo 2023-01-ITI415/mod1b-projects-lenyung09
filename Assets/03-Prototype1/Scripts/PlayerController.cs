@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private int count;
 
     public Text countText;
+
+    public Collider goal;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         count = 0;
         SetCountText();
+        goal.gameObject.SetActive(false);
     }
     
     void FixedUpdate()
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
             SetCountText();
             if (count >= 15) 
             {
-                //.gameObject.SetActive(true);
+                goal.gameObject.SetActive(true);
             }
         }
     }
