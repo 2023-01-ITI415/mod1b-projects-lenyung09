@@ -32,7 +32,13 @@ public class PlayerController : MonoBehaviour
         winText.gameObject.SetActive(false);
     }
 
-    
+    void Update() {
+        if (Input.GetKeyDown ("space")) {
+                Vector3 jump = new Vector3 (0.0f, 400.0f, 0.0f);
+           
+                rb.AddForce (jump);
+            }
+    }
     
     void FixedUpdate()
     {
