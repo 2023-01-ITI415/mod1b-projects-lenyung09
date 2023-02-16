@@ -62,6 +62,15 @@ public class PlayerController : MonoBehaviour
                 goal.gameObject.SetActive(true);
             }
         }
+        if (other.gameObject.CompareTag("Apple"))
+    {
+        other.gameObject.SetActive(false);
+        livesCount--;
+        livesText.text = "Lives: " + livesCount.ToString();
+        if (livesCount == 0){
+        SceneManager.LoadScene("Main-Prototype 1");
+        }
+    }
     
     }
     
