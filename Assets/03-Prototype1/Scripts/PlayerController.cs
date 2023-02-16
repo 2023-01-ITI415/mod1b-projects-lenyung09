@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene("Main-Prototype 1");
         }
     }
+    if (other.gameObject.CompareTag("Finish")) {
+        winText.gameObject.SetActive(true);
+        Time.timeScale = 0;
+    }
+
     
     }
     
