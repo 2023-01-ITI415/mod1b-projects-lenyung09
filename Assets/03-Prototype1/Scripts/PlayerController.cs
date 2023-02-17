@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private int count;
 
-    private int livesCount = 3;
+    private int livesCount = 5;
 
     public Text countText;
 
