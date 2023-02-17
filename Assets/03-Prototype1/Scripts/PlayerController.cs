@@ -33,11 +33,16 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown ("space")) {
+        if (Input.GetKeyDown ("space") || Input.GetKeyDown ("w") || Input.GetKeyDown ("up")) {
                 Vector3 jump = new Vector3 (0.0f, 400.0f, 0.0f);
            
                 rb.AddForce (jump);
             }
+        if (Input.GetKeyDown ("s") || Input.GetKeyDown ("down")) {
+                Vector3 jump = new Vector3 (0.0f, -100.0f, 0.0f);
+           
+                rb.AddForce (jump);
+            }    
     }
     
     void FixedUpdate()
