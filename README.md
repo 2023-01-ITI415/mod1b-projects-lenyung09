@@ -1,10 +1,18 @@
+# [Try my games here](https://2023-01-iti415.github.io/mod1b-projects-lenyung09/Web/)
+
 # Apple Picker
+![image](https://user-images.githubusercontent.com/71459641/219995286-a0ecfa75-8979-43a9-9044-a68c699e315b.png)
+
 Simple game where apples fall from a tree, and the player must catch these apples in a basket. The basket follows the player’s mouse and if the player does not catch the apple then they lose one of their three lives.
 
 # Mission Demolition
+![image](https://user-images.githubusercontent.com/71459641/219995239-90ecba4c-2856-418b-ae91-6070cc59702a.png)
+
 This is a game similar to Angry Birds where the player must sling projectiles at a structure. The goal is to get the projectile to touch the green goal tile that is defended by the building structure.
 
 # Prototype 1- Flappy Ball
+![image](https://user-images.githubusercontent.com/71459641/219995418-ea22a175-85f0-4776-8cb3-200d937b8cf0.png)
+
 My intentions when making this game were straightforward. I wanted to combine bits and pieces of what I learned from previous projects and mix it all into one game. I thought the best way of doing that was with this platformer. The game idea is simple. The player collects all the moving cubes while avoiding falling objects with their 5 lives. Once all the coins are collected, then a goal appears that the player needs to touch to win. Here are some of the mechanics that I implemented:
 - UI Text (Prior projects)
 - Lives system (ApplePicker)
